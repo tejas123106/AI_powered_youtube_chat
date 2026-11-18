@@ -1,0 +1,29 @@
+
+{
+  "manifest_version": 3,
+  "name": "YouTube AI Assistant",
+  "version": "1.0.0",
+  "description": "Ask questions about YouTube videos using AI.",
+  "permissions": [
+    "activeTab",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://www.youtube.com/*",
+    "http://127.0.0.1:8000/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "YouTube AI Assistant"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.youtube.com/*"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ]
+}

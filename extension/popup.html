@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube AI Assistant</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <h2>🎥 YouTube AI Assistant</h2>
+            <p>Ask anything about the video</p>
+        </header>
+
+        <div class="video-info">
+            <p id="videoTitle">No video detected</p>
+            <span id="videoStatus">Waiting for YouTube video...</span>
+        </div>
+
+        <button id="processBtn">
+    Process This Video
+</button>
+
+<button id="summarizeBtn">
+    Summarize Video
+</button>
+
+<div id="summaryContainer" class="hidden">
+    <h3>Video Summary</h3>
+    <div id="summaryContent"></div>
+</div>
+
+        <div id="loading" class="hidden">
+            Processing video, please wait...
+        </div>
+
+        <div class="chat-section">
+
+            <div id="chatMessages">
+                <div class="bot-message">
+                    Hello! Process a YouTube video and ask me questions about it.
+                </div>
+            </div>
+
+            <div class="input-section">
+                <input
+                    type="text"
+                    id="questionInput"
+                    placeholder="Ask a question..."
+                >
+
+                <button id="sendBtn">Send</button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="popup.js"></script>
+
+</body>
+</html>
